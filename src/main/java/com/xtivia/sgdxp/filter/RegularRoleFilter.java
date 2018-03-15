@@ -63,7 +63,7 @@ public class RegularRoleFilter extends AbstractSecurityFilter {
 		boolean result = true;
 		RegularRole annotation = getAnnotation(RegularRole.class);
 		if (annotation != null) {
-			String[] roles = annotation.value().split(",");
+			String[] roles = annotation.value();
 			User user = getUser();
 			if (user != null && !user.isDefaultUser()) {
 				try {
